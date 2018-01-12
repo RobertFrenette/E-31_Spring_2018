@@ -1,8 +1,6 @@
 # Development Environment Configuration
 
 ### These instructions are for macOS.
-Please see other TA Section content for MS Windows config.
-
 
 ## Installation Options
 
@@ -33,7 +31,7 @@ $ npm -v
 ```
 export PATH=$HOME/mongo/bin:$PATH
 ```
-+ create data/db dir structure in your Home dir
++ Create data/db dir structure in your Home dir
 + Open Terminal and execute the following to test
 ```
 $ mongo --version
