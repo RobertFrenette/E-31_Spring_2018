@@ -1,0 +1,12 @@
+
+info [Sat Jan 20 2018 07:51:53 GMT-0500 (EST)]  App accessed by rob: Failure - Command not found.
+
+info [Sat Jan 20 2018 07:52:00 GMT-0500 (EST)]  App accessed by rob: Failure - Missing Mountain Data param(s).
+
+info [Sat Jan 20 2018 07:52:05 GMT-0500 (EST)]  App accessed by rob: Failure - Command (delete) not able to be processed.
+
+info [Sat Jan 20 2018 07:52:12 GMT-0500 (EST)]  App accessed by rob: Success - Mt. Washington, 6,288.
+
+info [Sat Jan 20 2018 07:52:19 GMT-0500 (EST)]  App accessed by rob: Failure - Mountain not created: Duplicate mountain (Mt. Washington) found.
+
+info [Sat Jan 20 2018 07:52:43 GMT-0500 (EST)]  App accessed by rob: Success - Mt. Adams, 5,799.
