@@ -2,7 +2,7 @@
 
 ## Harvard Extension School, Spring 2018
 
-### Teaching Asssitant: [Rob Frenette](http://www.linkedin.com/in/robertmfrenette)
+### Teaching Asssitant: [Rob Frenette](https://www.linkedin.com/in/robertmfrenette)
 
 This Repo contains code examples covered in my weekly online Section.
 
