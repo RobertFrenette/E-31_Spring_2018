@@ -3,7 +3,7 @@
  *      node app.js insert --name="Mt. Washington" --elev="6,288"
  *      node app.js delete --name="Mt. Washington" --elev="6,288"
  *      node app.js --name="Mt. Washington" --elev="6,288"
- *      node app.js insert  --elev="6,288"
+ *      node app.js insert --name="Mt. Washington" --elev="6,288"
  */ 
 
 // require Node's built-in Modules

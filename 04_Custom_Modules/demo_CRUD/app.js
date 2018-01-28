@@ -28,7 +28,6 @@ if (command.match(/-/g)) {
     console.log('Command not found!');
 } else {
     // process command
-    // TBD: Refactor common code!
     if (command === 'create') {
         if (mountainName !== undefined && mountainElevation !== undefined) {
             var mountain = mountains.insertMountain(mountainName, mountainElevation);
