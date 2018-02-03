@@ -37,7 +37,7 @@ if (command.match(/-/g)) {
     logMsg = `Command (${command}) not able to be processed`;
 } else if (mountainName !== undefined && mountainElevation !== undefined) {
     // Good: node app.js insert --name="Mt. Washington" --elev="6,288"
-    var mountain = mountains.insertMountain(mountainName, mountainElevation);
+    var mountain = mountains.mountain.insertMountain(mountainName, mountainElevation);
     if (mountain) {
         logStatus = 'Success';
         logMsg = `${mountainName}, ${mountainElevation}`;

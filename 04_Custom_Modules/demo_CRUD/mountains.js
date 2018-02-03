@@ -80,7 +80,8 @@ var listMountains = () => {
   return getMountains();
 };
 
-// ES6
+// Here, we are exporting the functions we want to expose / invoke from app.js
+// Note these functions could have been wrapped in a single Object, as was done in demo/app.js
 module.exports = {
   insertMountain,
   getMountain,
