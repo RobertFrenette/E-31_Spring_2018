@@ -12,3 +12,4 @@ node_modules/
 
 # compiled Python output - Section 08 demo_py example
 *.pyc
+__pycache__
