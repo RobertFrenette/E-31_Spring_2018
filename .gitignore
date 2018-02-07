@@ -6,6 +6,7 @@ Thumbs.db
 
 # IDEs
 *.komodoproject
+.vscode/
 
 # dependencies
 node_modules/
