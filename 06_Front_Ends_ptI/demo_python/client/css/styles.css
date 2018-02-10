@@ -1,0 +1,23 @@
+body {
+    padding-top: 20px;
+    background-color: #186A3B;
+}
+.card {
+    height: 750px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #D0D3D4;
+}
+#mtnImage {
+    width: 335px;
+    height: 220px;
+    margin: auto;   
+}
+.hidden {
+    /*display: none;*/
+    visibility: hidden;
+}
+.card-text {
+    text-align: left;
+}

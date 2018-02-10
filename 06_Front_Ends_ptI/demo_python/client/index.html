@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>New Hampshire 4,000'ers</title>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+		<div class="container">
+			<div class="card">
+			  <!-- https://www.outdoors.org/wp-content/uploads/2017/10/Washington-StoryImage_2-5.jpg -->
+			  <img id="mtnImage" class="card-img-top hidden" src="" alt="" />
+			  <div class="card-body">
+				<h4 id="mtnName" class="card-title">Loading Mountain Data...</h4>
+				<h5 id="latlng"></h5>
+				<br />
+				<p id="mtnDesc" class="card-text"></p>
+			  </div>
+			  
+				<div id="mtnSelect" class="dropdown hidden">
+				  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Select a Mountain
+				  </button>
+				  <div id="metnSelectMnu" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        <script src="js/lat_lng.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NH 4K</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Home Page -->
+    <div data-role="page" id="home-page">
+      <div data-role="header">
+        <h1>NH 4k</h1>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2>New Hampshire 4,000'ers</h2>
+        <p>Ready to hike the 4,000-footers of the White Mountains?</p>
+        <p><a href="#map-page" class="ui-btn ui-shadow ui-corner-all" rel="external">Show Map</a></p>
+        <p><a href="#data-page" class="ui-btn ui-shadow ui-corner-all">View Mountain Data</a></p>
+        <p><a href="#disclaimer-page" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Disclaimer</a></p>
+      </div>
+
+      <div data-role="footer" data-theme="a">
+        <h4>&copy; R.M.Frenette 2018</h4>
+      </div>
+    </div>
+
+    <!-- Mountain Data Page -->
+    <div data-role="page" id="data-page">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false">
+        <h1>NH 4k</h1>
+        <a href="#home-page" data-rel="back" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all"  data-role="button" role="button">Back</a>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2>New Hampshire 4,000'ers</h2>
+        <p id="mtnErrorMsg" class="hidden">Error: Ubable to connect to server.</p>
+
+        <div id="mtnDispDiv" class="hidden">
+          <p id="mtnImgPara"><img src="" alt="" id="mtnImg"></p>
+          <h3>
+            <span id="mtnName"></span>:
+            <span id="mtnElev"></span>'
+          </h3>
+          <h4>Difficulty:
+            <span id="mtnDiff"></span>
+          </h4>
+          <p id="mtnDesc"></p>
+
+          <form id="mtn-data-frm">
+            <div class="ui-field-contain">
+                <label for="mtn-select"><span id="mtnSelectLabel">Select a Mountain:</span></label>
+                <select name="mtn-select" id="mtn-select"></select>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div data-role="footer" data-theme="a">
+        <h4>&copy; R.M.Frenette 2018</h4>
+      </div>
+    </div>
+
+    <!-- Map Page -->
+    <div data-role="page" id="map-page">
+      <div data-role="header" data-position="fixed" data-tap-toggle="false">
+        <h1>NH 4k</h1>
+        <a href="#home-page" data-rel="back" class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all"  data-role="button" role="button">Back</a>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2>New Hampshire 4,000'ers</h2>
+        <p id="mapErrorMsg" class="hidden">Error: Ubable to connect to server.</p>
+      </div>
+
+      <div class="ui-content" id="map-canvas">
+        <!-- map loads here -->
+      </div>
+
+      <div role="main" class="ui-content"><br /></div>
+
+      <div data-role="footer" data-theme="a">
+        <h4>&copy; R.M.Frenette 2018</h4>
+      </div>
+    </div>
+
+    <!-- Disclaimer Popup -->
+    <div data-role="page" id="disclaimer-page">
+      <div data-role="header" data-theme="b">
+        <h1>Disclaimer</h1>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2>Disclaimer</h2>
+        <p>The content for this site was obtained from the Appalachian Mountain Club's "
+          <a href="https://www.outdoors.org/trip-ideas-tips-resources/plan-your-trip/nh-4000-footers"
+            target="new">WHITE MOUNTAINS 4,000-FOOTER LIST AND PLANNING GUIDE</a>" and should only be used for educational purposes!</p>
+        <p><a href="#home-page" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Close</a></p>
+      </div>
+
+      <div data-role="footer">
+        <h4>&copy; R.M.Frenette 2018</h4>
+      </div>
+    </div>
+
+    <script src="js/map.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GMAPS_API_KEY_HERE&callback=initMap" async
+      defer></script>
+  </body>
+</html>
