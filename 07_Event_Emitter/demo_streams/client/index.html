@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>NH 4k</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/narrow-jumbotron.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>  
+  <body>
+    <div class="container">
+      <!-- Start Header -->
+      <header class="header clearfix">
+        <!-- Start Nav -->
+        <nav>
+          <a class="navbar-brand" href="index.html">NH 4k</a>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link" id="indexPage" href="index.html">Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="disclaimerPage" href="disclaimer.html">Disclaimer</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End Nav -->
+      </header>
+      <!-- End Header -->
+
+      <!-- Start Main -->
+      <main role="main">
+        <!-- Start Jumbotron -->
+        <div class="jumbotron">
+          <h1 class="display-3">New Hampshire 4,000'ers</h1>
+          <p class="lead">Ready to hike the 4,000-footers of the White Mountains?</p>
+        </div>
+        <!-- End Jumbotron -->
+
+        <!-- Start Main Content -->
+        <div class="row marketing">
+          <!--Button for selecting Mountain -->
+          <div class="col-lg-6">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                id="mtnBtn">Select a Mountain</button>
+              <div class="dropdown-menu" aria-labelledby="mtnBtn" id="dropDownMenuItems"></div>
+            </div>
+            <!-- Button for displaying Map -->
+            <div>
+              <br />
+              <button type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#mountainModal" id="mapBtn">
+                <i class="ion-ios-location"></i> Show Map</button>
+            </div>
+            
+            <!-- Bootstrap Alert for displaying "Loading ..." and "Error: ..." messages -->
+            <div>
+              <br />
+              <div class="alert alert-primary" role="alert" id="alertMsg">Loading data...</div>
+            </div>
+          </div>
+
+          <!-- Display Div for Mountian information -->
+          <div class="col-lg-6 hidden" id="mtnDiv">
+            <div class="card indexCard">
+              <img class="card-img-top" src="" alt="" id="mtnImg" />
+              <div class="card-body">
+                <div class="card-text">
+                  <h3>
+                    <span id="mtnName"></span>:
+                    <span id="mtnElev"></span>'
+                  </h3>
+                  <h4>Difficulty:
+                    <span id="mtnDiff"></span>
+                  </h4>
+                  <p id="mtnDesc"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Main Content -->
+
+        <!-- Start Modal -->
+        <div class="modal fade" id="mountainModal" tabindex="-1" role="dialog" aria-labelledby="mountainModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="mountainModalLabel">Map</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <!-- Div to display Map -->
+            <div class="modal-body">
+            <div id="map"></div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- End Modal -->
+      </main>
+
+      <footer class="footer text-right">
+        <p>&copy; R.M.Frenette 2018 (<a href="disclaimer.html">disclaimer</a>)</p>
+      </footer>      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+      crossorigin="anonymous"></script>
+    <script src="js/map.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GMAPS_API_KEY_HERE&callback=initMap" async
+      defer></script>
+  </body>
+</html>
