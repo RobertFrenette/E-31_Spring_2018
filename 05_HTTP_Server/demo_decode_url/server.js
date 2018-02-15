@@ -51,7 +51,7 @@ http.createServer(function(request, response){
   let { pathname, query } = url.parse(clientURL);
   if (pathname === '/') {
 
-    response.writeHead(200, {'Content-type':'text/plan'});
+    response.writeHead(200, {'Content-type':'text/plain'});
     response.write('Hello, Node!');
     response.end( );
 
@@ -65,7 +65,7 @@ http.createServer(function(request, response){
       userName = queryData.username;
     }
 
-    response.writeHead(200, {'Content-type':'text/plan'});
+    response.writeHead(200, {'Content-type':'text/plain'});
     response.write(`Hello, ${userName}!`);
     response.end( );
 
