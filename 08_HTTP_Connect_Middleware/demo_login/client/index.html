@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Log In</title>
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>  
+  <body class="text-center">
+    <div>
+      <form class="form-login" id="form-login">
+        <img class="mb-4" src="/img/lock.png" alt="Login" id="lock" />
+
+        <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
+
+        <label for="inputEmail" class="sr-only">Email Address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus />
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required />
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitBtn">Log in</button>
+        <button class="btn btn-lg btn-info btn-block hidden" type="button" id="logoutBtn">Log out</button>
+
+        <br />
+        <div class="alert alert-success hidden" role="alert" id="msg"></div>  
+
+        <p class="mt-5 mb-3 text-muted">&copy; 2018</p>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+      crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
