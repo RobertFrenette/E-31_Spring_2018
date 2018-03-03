@@ -6,6 +6,9 @@ const users = require('./routes/users');
 // Create App
 var app = express();
 
+// Set a var that is accessible via the App
+app.locals.secretvalue = "CSCIE-31";
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 

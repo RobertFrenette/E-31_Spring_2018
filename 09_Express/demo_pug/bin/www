@@ -9,5 +9,5 @@ var server = http.createServer(app);
 
 server.listen(port);
 server.on('listening', () => {
-  console.log(`Server Listening on ${server.address().port}`);
+  console.log(`Server Listening on ${server.address().port}\n`);
 });
