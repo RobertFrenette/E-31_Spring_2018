@@ -24,7 +24,7 @@ $ node ./bin/www
 ![Screen Shot](img/img.png?raw=true "Screen Shot")
 
 
-### Test in Browser
+### Test in Browser (Login)
 + [http://localhost:3000](http://localhost:3000)in browser
 + Click the [Login](http://localhost:3000/login) button or menu item
 + Login (Note: There is no auth on creds in this demo)
