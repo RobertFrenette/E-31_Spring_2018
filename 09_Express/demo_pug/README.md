@@ -15,7 +15,7 @@ $ node ./bin/www
 ### Test in Browser (404 error route)
 + [http://localhost:3000/test](http://localhost:3000/test)
 
-![Screen Shot](img/img_1.png?raw=true "Screen Shot")
+![Screen Shot](img/1.png?raw=true "Screen Shot")
 
 
 ### Test in Browser
@@ -25,9 +25,10 @@ $ node ./bin/www
     + UserName = FooBar
     + Password = password
 
+![Screen Shot](img/2.png?raw=true "Screen Shot")
 
 ### Dashboard
-![Screen Shot](img/img_3.png?raw=true "Screen Shot")
+![Screen Shot](img/3.png?raw=true "Screen Shot")
 
 
 
