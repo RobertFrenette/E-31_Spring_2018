@@ -1,6 +1,16 @@
 const express = require('express');
 var router = express.Router();
 
+// Demo of Param and QueryString
+// http://localhost:3000/users/secret/mysecretkey?mysecretvalue=123
+router.get('/secret/:key', (req, res, next) => {
+  let key = req.params.key;           // mysecretkey
+  let val = req.query.mysecretvalue;  // 123
+  console.log(`${key} : ${val}`);
+
+  res.render('secret', {"key" : key, "val": val});
+});
+
 router.get('/login', (req, res, next) => {
   // Access var set in app.js
   console.log(`req.app.locals.secretvalue: ${req.app.locals.secretvalue}`);

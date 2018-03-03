@@ -18,6 +18,12 @@ $ node ./bin/www
 ![Screen Shot](img/1.png?raw=true "Screen Shot")
 
 
+### Test in Browser (Param and QueryString)
++ [http://localhost:3000/users/secret/mysecretkey?mysecretvalue=123](http://localhost:3000/users/secret/mysecretkey?mysecretvalue=123)in browser
+
+![Screen Shot](img/img.png?raw=true "Screen Shot")
+
+
 ### Test in Browser
 + [http://localhost:3000](http://localhost:3000)in browser
 + Click the [Login](http://localhost:3000/login) button or menu item
@@ -27,7 +33,9 @@ $ node ./bin/www
 
 ![Screen Shot](img/2.png?raw=true "Screen Shot")
 
+
 ### Dashboard
+
 ![Screen Shot](img/3.png?raw=true "Screen Shot")
 
 
