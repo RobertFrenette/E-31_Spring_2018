@@ -33,5 +33,6 @@ $ node server.js
 ![Screen Shot](img/img_2.png?raw=true "Screen Shot")
 
 ## Useful link(s)
+* [hbs](https://www.npmjs.com/package/hbs)
 * [body-parser](https://www.npmjs.com/package/body-parser)
  

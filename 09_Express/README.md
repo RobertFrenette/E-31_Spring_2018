@@ -47,4 +47,3 @@ info [Sat Feb 24 2018 06:52:58 GMT-0500 (EST)]  Sat Feb 24 2018 06:52:58 GMT-050
 
 ## Useful links
 * [Express](https://expressjs.com/)
-* [hbs](https://www.npmjs.com/package/hbs)
