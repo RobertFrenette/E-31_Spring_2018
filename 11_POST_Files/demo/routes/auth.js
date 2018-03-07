@@ -6,8 +6,8 @@ var flash = require('connect-flash');
 var log = require('log-util');
 
 // Include Custom Modules
-var user_persist = require('./../../utils/user_persist');
-var blog_persist = require('./../../utils/blog_persist');
+var user_persist = require('./../utils/user_persist');
+var blog_persist = require('./../utils/blog_persist');
 
 // init Flash
 authRouter.use(flash());  
