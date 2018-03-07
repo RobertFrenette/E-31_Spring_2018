@@ -1,0 +1,34 @@
+<div class="container marketing">
+  <div class="row">
+    {{#each blogData}}
+    <div class="col-lg-4">
+      <img class="rounded-circle" src="{{this.imageurl}}" alt="{{this.hikename}}" />
+      <h2>{{this.hikename}}</h2>
+      <h3>{{this.hikediff}}</h3>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="container">
+  <hr />
+  {{#if flashMsg}}
+  <div class="alert alert-danger" role="alert">{{flashMsg}}</div>
+  {{/if}}
+  <!-- set enctype="multipart/form-data" for file upload -->
+  <form id="blogEntry" action="/auth/blog" method="POST" enctype="multipart/form-data" class="form-group">
+    <div class="form-group">
+      <label for="hikename">Hike Name</label>
+      <input type="text" class="form-control" id="hikename" name="hikename" placeholder="Enter a Name for your Hike" required autofocus />
+    </div>
+    <div class="form-group">
+      <label for="hikediff">Description (optional)</label>
+      <input type="text" class="form-control" id="hikediff" name="hikediff" placeholder="Enter the Difficulty" />
+    </div>
+    <div class="form-group">
+      <label for="imageurl">Pic</label>
+      <input type="file" class="form-control" id="imageurl" name="imageurl" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Hike</button> <button type="reset" class="btn btn-secondary" id="resetBtn">Reset</button>
+  </form>
+</div>
