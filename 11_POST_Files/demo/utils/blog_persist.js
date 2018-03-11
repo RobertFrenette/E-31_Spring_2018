@@ -20,10 +20,13 @@ var saveBlog = (username, blog) => {
 // Insert a Hike
 var addHike = (username, hikedata) => {
     var blog = getBlog(username);
+    var len = blog.length;
 
     var hike = {
+        id: len,
         hikename: hikedata.hikename,
         hikediff: hikedata.hikediff,
+        hikedesc: hikedata.hikedesc,
         imageurl: hikedata.imageurl
       };
       
@@ -41,8 +44,18 @@ var addHike = (username, hikedata) => {
         return null;
     }
 };
+
+// get specific hike for user by hike id
+var getHike = (username, id) => {
+    var blog = getBlog(username);
+    var theHike =  blog.filter((hike) => {
+        return hike.id === id;
+    });
+    return theHike;
+};
  
 module.exports = {
     getBlog,
-    addHike
+    addHike,
+    getHike
 };

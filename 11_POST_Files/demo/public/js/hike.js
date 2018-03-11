@@ -3,6 +3,6 @@
 $(document).ready(function () {
   $('#registerLink').hide();
   $('#loginLink').hide();
-  $('#blogLink').hide();
+  $('#blogLink').show();
   $('#logoutLink').show();
 });

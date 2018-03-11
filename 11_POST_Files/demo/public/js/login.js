@@ -17,11 +17,20 @@ $(document).ready(function () {
   }
 
   // Bind Event Handlers
+  /*
   loginBtn.click(function () {
     if (localStorargeSupported()) {
       localStorage.setItem('persistedData', JSON.stringify({"userName": userName.val(), "rememberMe": rememberMe.is(':checked')}));
     }
     loginForm.submit();
+  });
+  */
+  loginForm.submit(function (e) {
+    e.preventDefault();
+    if (localStorargeSupported()) {
+      localStorage.setItem('persistedData', JSON.stringify({"userName": userName.val(), "rememberMe": rememberMe.is(':checked')}));
+    }
+    this.submit();
   });
 
   // on page load
