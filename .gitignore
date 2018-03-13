@@ -11,6 +11,9 @@ Thumbs.db
 # dependencies
 node_modules/
 
+# Mongo Shell
+mongodb_atlas
+
 # compiled Python output - Section 08 demo_py example
 *.pyc
 __pycache__
