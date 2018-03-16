@@ -1,0 +1,11 @@
+{
+  "name": "2_promises",
+  "version": "1.0.0",
+  "description": "In this Section we'll look at Asynchronous Processing using Promises.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
