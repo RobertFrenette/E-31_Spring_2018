@@ -1,0 +1,8 @@
+{
+  "host": "localhost",
+  "user": "e31",
+  "password": "password",
+  "db": "demo",
+  "connectionLimit": 100,
+  "debug": false
+}
