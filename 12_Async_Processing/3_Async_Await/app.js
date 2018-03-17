@@ -42,7 +42,7 @@ async function getAddress(address) {
         // 1. Call funct with returns a Promise
         var theAddress =  JSON.stringify(getDataForAddress(address));
 
-        // 2. Call funct with returns a Promise using Await
+        // 2. Call funct which returns a Promise using Await
         //var theAddress = await getDataForAddress(address);
         
         console.log(`Address Response: ${theAddress}`);
