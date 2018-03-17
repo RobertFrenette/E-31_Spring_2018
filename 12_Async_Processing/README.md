@@ -38,6 +38,6 @@ IMPORTANT: The CallBack is not execute at this time, it is just placed in the Qu
 
 
 ## Useful link(s)
-* [The Node.js Event Loop](hhttps://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
+* [The Node.js Event Loop](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
 * [request](https://www.npmjs.com/package/request)
 * [axios](https://www.npmjs.com/package/axios/)
