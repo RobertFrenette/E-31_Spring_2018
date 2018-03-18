@@ -106,9 +106,13 @@ authRouter.post('/blog', upload.single('imageurl'), (req, res, next) => {
       imageurl: imageurl
     });
 
-    Hike.find({hikename: hikename}, (err, hikes) => {
-      if (err) {
+    Hike.find()
+    .where('username').equals(username)
+    .where('hikename').equals(hikename)
+    .exec((err, hikes) => {
+      if (err) { 
         log.error(`Error finding Hike: ${hikename}`);
+        next(new Error('BlogPostFailedError', false));
       } else {
         if (hikes.length === 0) {
           // Hike with this name does not exist
