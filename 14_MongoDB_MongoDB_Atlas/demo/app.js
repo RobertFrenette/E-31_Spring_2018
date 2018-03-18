@@ -37,6 +37,16 @@ db.on('open', () => {
       }
       console.log('Users:');
       console.log(users);
+
+      // We should only have 1 User in this example
+      if (users.length === 1) {
+        console.log('Removing User.');
+        users[0].remove((err) => {
+          if (err) {
+            console.log('Error removing User.');
+          }
+        });
+      }
     });
   });
 }).catch((err) => {

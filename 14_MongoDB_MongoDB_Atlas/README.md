@@ -19,8 +19,13 @@ Users:
     user_name: 'Admin',
     user_password: 'password',
     __v: 0 } ]
+Removing User.
 ^C
 $
 ```
 
+### After Insert
 ![MongoDB Compass](img/img_1.png?raw=true "MongoDB Compass")
+
+### After Delete
+![MongoDB Compass](img/img_2.png?raw=true "MongoDB Compass")
