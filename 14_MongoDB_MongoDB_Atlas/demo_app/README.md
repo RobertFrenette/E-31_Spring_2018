@@ -5,7 +5,7 @@ This App is modified from the App shown in the [11_POST_Files Section](https://g
 ## Generate the App (express-generator)
 ```
 $ express --view=hbs demo_app
-$ cd demo
+$ cd demo_app
 $ npm install
 $ npm install --save log-util express-session connect-cookies multer connect-flash mongoose dotenv
 ```
