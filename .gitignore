@@ -11,6 +11,9 @@ Thumbs.db
 # dependencies
 node_modules/
 
+# dotenv
+.env
+
 # Mongo Shell
 mongodb_atlas
 
