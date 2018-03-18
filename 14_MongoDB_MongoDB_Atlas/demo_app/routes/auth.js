@@ -1,14 +1,13 @@
 var express = require('express');
 var authRouter = express.Router();
 
+// Mongoose Models
 const {User} = require('./../models/user');
+const {Hike} = require('./../models/hike');
 
 var multer = require('multer');
 var flash = require('connect-flash');
 var log = require('log-util');
-
-// Include Custom Modules
-var blog_persist = require('./../utils/blog_persist');
 
 // init Flash
 authRouter.use(flash());  
@@ -29,31 +28,31 @@ authRouter.post('/register', (req, res, next) => {
     password: password
   });
 
-    User.find()
-    .and([
-        { $or: [{username: username}, {email: email}] }
-    ])
-    .exec((err, u) => {
-      if (err) { 
-        log.error(`Registration Error: ${err}`);
-        next(new Error('RegistrationFailedError', false));
-      } else {
-        if (u.length === 0) {
-          // User does not exist
-          user.save().then((u) => {
-            log.info(`Registration Successful for User: ${username}`);
-            res.redirect('/users/login');
-          }, (err) => {
-            log.error(`Registration Error: ${err}`);
-            next(new Error('RegistrationFailedError', false));
-          });
-        } else {
-          // User already registered
-          log.error(`Registration Error: User with creds ${username} and/or ${email}, ${password} already registered.`);
+  User.find()
+  .and([
+      { $or: [{username: username}, {email: email}] }
+  ])
+  .exec((err, u) => {
+    if (err) { 
+      log.error(`Registration Error: ${err}`);
+      next(new Error('RegistrationFailedError', false));
+    } else {
+      if (u.length === 0) {
+        // User does not exist
+        user.save().then((u) => {
+          log.info(`Registration Successful for User: ${username}`);
+          res.redirect('/users/login');
+        }, (err) => {
+          log.error(`Registration Error: ${err}`);
           next(new Error('RegistrationFailedError', false));
-        }
+        });
+      } else {
+        // User already registered
+        log.error(`Registration Error: User with creds ${username} and/or ${email}, ${password} already registered.`);
+        next(new Error('RegistrationFailedError', false));
       }
-    });
+    }
+  });
 });
 
 // User Login
@@ -68,7 +67,7 @@ authRouter.post('/login', (req, res, next) => {
       
       // put username in session - validate on Blog page
       req.session.username = username;
-      req.session.blogdata = blog_persist.getBlog(username);
+      ////req.session.blogdata = blog_persist.getBlog(username);
       res.redirect('/users/blog');
     } else {
       log.info(`Login Unsucessful for User: ${username}, ${password}`);
@@ -99,13 +98,35 @@ authRouter.post('/blog', upload.single('imageurl'), (req, res, next) => {
     }
     log.info(`Blog Post: ${username}, ${hikename}, ${hikediff}, ${hikedesc}, ${imageurl}`);
 
-    var blog = blog_persist.addHike(username, {"hikename": hikename, "hikediff": hikediff, "imageurl": imageurl, "hikedesc": hikedesc});
-    if (blog) {
-      req.session.blogdata = blog;
-      res.redirect('/users/blog');
-    } else {
-      next(new Error('BlogPostFailedError', false));
-    }
+    var hike = new Hike({
+      username: username,
+      hikename: hikename,
+      hikediff: hikediff,
+      hikedesc: hikedesc,
+      imageurl: imageurl
+    });
+
+    Hike.find({hikename: hikename}, (err, hikes) => {
+      if (err) {
+        log.error(`Error finding Hike: ${hikename}`);
+      } else {
+        if (hikes.length === 0) {
+          // Hike with this name does not exist
+          hike.save().then((h) => {
+            log.info(`BlogPost Successful for User: ${username}, ${hikename}`);
+            ////req.session.blogdata = blog;
+            res.redirect('/users/blog');
+          }, (err) => {
+            log.error(`BlogPost  Error: ${err}`);
+            next(new Error('BlogPostFailedError', false));
+          });
+        } else {
+          // Duplicte Hike name found
+          log.error(`BlogPost Error: Hike with name ${hikename} already exists for user ${username}`);
+          next(new Error('BlogPostFailedError', false));
+        }
+      }
+    });
   } else {
     log.error('Error: Attempt to post Blog entry without username.');
     res.status(500).redirect('/error.html');
