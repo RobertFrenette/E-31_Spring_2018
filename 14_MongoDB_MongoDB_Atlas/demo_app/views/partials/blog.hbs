@@ -1,0 +1,43 @@
+<div class="container marketing">
+  <div class="row">
+    {{#each blogData}}
+    <div class="col-lg-4">
+      <img class="rounded-circle" src="{{this.imageurl}}" alt="{{this.hikename}}" />
+      <h2>{{this.hikename}}</h2>
+      <p><a class="btn btn-info btn-lg" href="/auth/hike/{{this.id}}" role="button">Details</a></p>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class="container">
+  <hr />
+  {{#if flashMsg}}
+  <div class="alert alert-danger" role="alert">{{flashMsg}}</div>
+  {{/if}}
+  <!-- set enctype="multipart/form-data" for file upload -->
+  <form id="blogEntry" action="/auth/blog" method="POST" enctype="multipart/form-data" class="form-group">
+    <div class="form-group">
+      <label for="hikename">Hike Name</label>
+      <input type="text" class="form-control" id="hikename" name="hikename" placeholder="Enter a Name for your Hike" required autofocus />
+    </div>
+    <div class="form-group">
+      <label for="mtnEffort">Effort</label>
+      <select class="form-control" name="hikediff" id="hikediff" required>
+        <option value="">Select</option>
+        <option value="Strenuous">Strenuous</option>
+        <option value="Moderate">Moderate</option>
+        <option value="Moderate to Strenuous">Moderate to Strenuous</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="hikedesc">Description (optional)</label>
+      <textarea class="form-control" name="hikedesc" id="hikedesc" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="imageurl">Pic</label>
+      <input type="file" class="form-control" id="imageurl" name="imageurl" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Hike</button> <button type="reset" class="btn btn-secondary" id="resetBtn">Reset</button>
+  </form>
+</div>

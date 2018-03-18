@@ -1,0 +1,27 @@
+<h1>{{pageTitle}}</h1>
+<div class="container">
+  {{#if flashMsg}}
+  <div class="alert alert-danger" role="alert">{{flashMsg}}</div>
+  {{/if}}
+  <form id="loginForm" action="/auth/login" method="POST">
+    <div class="form-group">
+      <label for="userName">User Name</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="Enter your User Name" required autofocus/>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your Password" required />
+    </div>
+    <div class="form-check rememberMe">
+      <input type="checkbox" class="form-check-input" id="rememberMe" />
+      <label class="form-check-label" for="rememberMe">Remember Me</label>
+    </div>
+    <!--<button type="button" class="btn btn-primary" id="loginBtn">Login</button>-->
+    <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+    <button type="reset" class="btn btn-secondary" id="resetBtn">Reset</button>
+  </form>
+</div>
+<div class="container">
+  <br />Don't have an account?
+  <a href="/users/register" title="Register">Register.</a>
+</div>

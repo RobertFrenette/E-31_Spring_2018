@@ -1,0 +1,13 @@
+<div class="container">
+  <hr />
+  {{#if flashMsg}}
+  <div class="alert alert-danger" role="alert">{{flashMsg}}</div>
+  {{/if}}
+  <div>
+    <img src="{{hikeData.imageurl}}" alt="{{hikeData.hikename}}" />
+  </div>
+  <h3>{{hikeData.hikename}}</h3>
+  <h4>{{hikeData.hikediff}}</h4>
+  <div>{{hikeData.hikedesc}}</div>
+  <p><br /><a class="btn btn-info btn-lg" href="/users/blog" role="button">Back</a></p>
+</div>
