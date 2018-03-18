@@ -1,6 +1,6 @@
 # MongoDB - local setup
 
-IMPORTANT: We will be using [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for our DB in the Course!  This Section is an "advanced topic" which is not officially part of the course. I'm presenting it as an example for those who wish to install Mongo on their Dev machine. If you are looking for the Section content on MongoDB Atlas, please see [Section 14_MongoDB_MongoDBAtlas](https://github.com/RobertFrenette/E-31_Spring_2018/tree/master/14_MongoDB_MongoDBAtlas).
+IMPORTANT: We will be using [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for our DB in the Course!  This Section is an "advanced topic" which is not officially part of the course. I'm presenting it as an example for those who wish to install Mongo on their Dev machine. If you are looking for the Section content on MongoDB Atlas, please see [Section 14_MongoDB_MongoDBAtlas](https://github.com/RobertFrenette/E-31_Spring_2018/tree/master/14_MongoDB_MongoDB_Atlas).
 
 Note: See [00_Dev_Environment_Config Section content](https://github.com/RobertFrenette/E-31_Spring_2018/tree/master/00_Dev_Environment_Config) to install / configure MongoDB on your Local Machine prior to continuing on with this content.
 

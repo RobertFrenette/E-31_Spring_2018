@@ -23,4 +23,4 @@ Users:
 $
 ```
 
-![MongoDB Compass](img/img_1.png?raw=true "Robo 3T")
+![MongoDB Compass](img/img_1.png?raw=true "MongoDB Compass")
