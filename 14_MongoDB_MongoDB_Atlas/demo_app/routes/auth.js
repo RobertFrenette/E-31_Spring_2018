@@ -64,11 +64,14 @@ authRouter.post('/login', (req, res, next) => {
   User.find({username: username, password: password}).then((users) => {
     if (users.length > 0) {
       log.info(`Login Successful for User: ${username}`);
-      
-      // put username in session - validate on Blog page
-      req.session.username = username;
-      ////req.session.blogdata = blog_persist.getBlog(username);
-      res.redirect('/users/blog');
+
+      Hike.find({username: username}).then((blog) => {
+        // put username in session - validate on Blog page
+        req.session.username = username;
+          req.session.blogdata = blog;
+          res.redirect('/users/blog');
+      });
+
     } else {
       log.info(`Login Unsucessful for User: ${username}, ${password}`);
       next(new Error('LoginFailedError', false));  
@@ -118,8 +121,14 @@ authRouter.post('/blog', upload.single('imageurl'), (req, res, next) => {
           // Hike with this name does not exist
           hike.save().then((h) => {
             log.info(`BlogPost Successful for User: ${username}, ${hikename}`);
-            ////req.session.blogdata = blog;
-            res.redirect('/users/blog');
+
+            Hike.find({username: username}).then((blog) => {
+              // put username in session - validate on Blog page
+              req.session.username = username;
+                req.session.blogdata = blog;
+                res.redirect('/users/blog');
+            });
+
           }, (err) => {
             log.error(`BlogPost  Error: ${err}`);
             next(new Error('BlogPostFailedError', false));
@@ -145,19 +154,20 @@ authRouter.get('/hike/:id', (req, res, next) => {
     // validate we have a hike id
     var id = req.params.id;
     if (! isNaN(parseInt(id))) {
-      var theHike = blog_persist.getHike(username, parseInt(id));
-      res.render('hike.hbs', {
-        pageTitle: 'Hike',
-        hikeData: {
-                    hikename: theHike[0].hikename,
-                    hikediff: theHike[0].hikediff,
-                    hikedesc: theHike[0].hikedesc,
-                    imageurl: theHike[0].imageurl
-                  },
-        flashMsg: req.flash('HikeDetailsFailedError')
+      Hike.find({_id: id}).then((hike) => {
+        res.render('hike.hbs', {
+          pageTitle: 'Hike',
+          hikeData: {
+                      hikename: hike[0].hikename,
+                      hikediff: hike[0].hikediff,
+                      hikedesc: hike[0].hikedesc,
+                      imageurl: hike[0].imageurl
+                    },
+          flashMsg: req.flash('HikeDetailsFailedError')
+        });
       });
     } else {
-      next(new Error('BlogPostFailedError', false));
+      next(new Error('HikeDetailsFailedError', false));
     }
   } else {
     log.error('Error: Attempt to access Hike without username.');
