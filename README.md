@@ -6,7 +6,7 @@
 
 This Repo contains code examples covered in my weekly online Section.
 
-The code for the [Companion App](http://e31.robertmfrenette.com) written over the course of the Semester is avaiable in the [E-31_Spring_2018_App Repo](https://github.com/RobertFrenette/E-31_Spring_2018_App).
+The code for the [Companion App](http://www.mylistsapp.com/) written over the course of the Semester is avaiable in the [E-31_Spring_2018_App Repo](https://github.com/RobertFrenette/E-31_Spring_2018_App).
 
 Note: Although experience with server-side application development is not a prerequisite for this course,
 thorough knowledge of client-side web development,
