@@ -6,7 +6,7 @@ In this Section we'll look at implemetning the MVC pattern with Express and HBS.
 $ cd demo
 $ npm install
   ...
-$
+$ npm start
 ```
 
 ### Launch in Browser
