@@ -20,6 +20,7 @@ $ npm start
 
 ### GET / Read
 + Replace MOUNTAIN_ID in URI below with _id returned in Create above
+
 [http://localhost:3000/api/MOUNTAIN_ID](http://localhost:3000/api/MOUNTAIN_ID)
 
 ![Read](img/read.png?raw=true "Read")
@@ -27,6 +28,7 @@ $ npm start
 
 ### PATCH / Update
 + Replace MOUNTAIN_ID in URI below with _id returned in Create above
+
 [http://localhost:3000/api/update/MOUNTAIN_ID](http://localhost:3000/api/update/MOUNTAIN_ID)
 
 ![Update](img/update.png?raw=true "Update")
@@ -34,6 +36,7 @@ $ npm start
 
 ### DELETE / Delete
 + Replace MOUNTAIN_ID in URI below with _id returned in Create above
+
 [http://localhost:3000/api/delete/MOUNTAIN_ID](http://localhost:3000/api/delete/MOUNTAIN_ID)
 
 ![Delete](img/delete.png?raw=true "Delete")
