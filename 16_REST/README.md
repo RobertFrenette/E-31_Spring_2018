@@ -27,7 +27,7 @@ $ npm start
 
 
 ### PATCH / Update
-+ Replace MOUNTAIN_ID in URI below with _id returned in Create above
++ Replace MOUNTAIN_ID in URI below with _id returned in Read above
 
 [http://localhost:3000/api/update/MOUNTAIN_ID](http://localhost:3000/api/update/MOUNTAIN_ID)
 
@@ -35,7 +35,7 @@ $ npm start
 
 
 ### DELETE / Delete
-+ Replace MOUNTAIN_ID in URI below with _id returned in Create above
++ Replace MOUNTAIN_ID in URI below with _id returned in Update above
 
 [http://localhost:3000/api/delete/MOUNTAIN_ID](http://localhost:3000/api/delete/MOUNTAIN_ID)
 
