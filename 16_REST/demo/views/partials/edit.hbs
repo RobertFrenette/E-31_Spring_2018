@@ -1,0 +1,15 @@
+<form id="mountainForm" action="/mountains/update/{{mountain._id}}" method="POST" class="form-group">
+    <div class="form-group">
+      <label for="name">Mountain Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="{{mountain.name}}" required autofocus />
+    </div>
+    <div class="form-group">
+      <label for="elev">Elevation</label>
+      <input type="text" class="form-control" id="elev" name="elev"  value="{{mountain.elev}}" required />
+    </div>
+    <div class="form-group">
+        <label for="desc">Description (optional)</label>
+        <textarea class="form-control" name="desc" id="desc" rows="3">{{mountain.desc}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Mountain</button> <button type="reset" class="btn btn-secondary">Reset</button>
+</form>

@@ -1,0 +1,29 @@
+<form id="mountainForm" action="/mountains/create" method="POST" class="form-group">
+    <div class="form-group">
+      <label for="name">Mountain Name</label>
+      <input type="text" class="form-control" id="name" name="name" required autofocus />
+    </div>
+    <div class="form-group">
+      <label for="elev">Elevation</label>
+      <input type="text" class="form-control" id="elev" name="elev" required />
+    </div>
+    <div class="form-group">
+        <label for="desc">Description (optional)</label>
+        <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Mountain</button> <button type="reset" class="btn btn-secondary">Reset</button>
+</form>
+
+<hr />
+
+<div>
+    {{#each mountains}}
+        <h2>{{this.name}}</h2>
+        <p>
+            Elevation: {{this.elev}}'
+            <br />{{this.desc}}
+        </p>
+        <p><a href="/mountains/{{this._id}}">edit</a>  / <a href="/mountains/delete/{{this._id}}">delete</a></p>
+    {{/each}}
+</div>
+
