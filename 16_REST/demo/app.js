@@ -22,7 +22,6 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/mountains', mountains);
 app.use('/api', api);
