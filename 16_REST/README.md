@@ -26,12 +26,12 @@ $ npm start
 ![Read](img/read.png?raw=true "Read")
 
 
-### PATCH / Update
+### PUT / Update
 + Replace MOUNTAIN_ID in URI below with _id returned in Read above
 
 [http://localhost:3000/api/update/MOUNTAIN_ID](http://localhost:3000/api/update/MOUNTAIN_ID)
 
-![Update](img/update.png?raw=true "Update")
+![Update](img/put_update.png?raw=true "Update")
 
 
 ### DELETE / Delete
