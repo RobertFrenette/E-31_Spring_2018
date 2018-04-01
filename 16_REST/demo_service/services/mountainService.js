@@ -10,7 +10,7 @@ MountainService.list = (searchParams) => {
             return mountains;
         })
         .catch((err) => {
-            throw errr;
+            throw err;
         });
 };
 
@@ -25,7 +25,7 @@ MountainService.create = (mountainObj) => {
             return m;
         })
         .catch((err) => {
-            throw errr;
+            throw err;
         });
 };
 
@@ -36,7 +36,7 @@ MountainService.read = (mountainId) => {
             return mountain;
         })
         .catch((err) => {
-            throw errr;
+            throw err;
         });
 };
 
@@ -55,7 +55,7 @@ MountainService.update = (mountainId, mountainObj) => {
             return mountain;
         })
         .catch((err) => {
-            throw errr;
+            throw err;
         });
 };
 
@@ -66,7 +66,7 @@ MountainService.delete = (mountainId) => {
         return mountain;
     })
     .catch((err) => {
-        throw errr;
+        throw err;
     });
 };
 
