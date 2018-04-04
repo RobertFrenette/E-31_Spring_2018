@@ -37,10 +37,19 @@
           <label for="desc">Description (optional)</label>
           <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Add Mountain</button>
-        <button type="reset" class="btn btn-secondary"  id="resetBtn">Reset</button>
+        <div id="addMtnBtns">
+          <button type="submit" class="btn btn-primary">Add Mountain</button>
+          <button type="reset" class="btn btn-secondary"  id="resetBtn">Reset</button>
+        </div>
+        <div id="editMtnBtns" class="hidden">
+          <input type="text" class="form-control" id="editId" name="editId" disabled required />
+          <br />
+          <button type="button" class="btn btn-primary" id="editBtn">Edit Mountain</button>
+          <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+        </div>
       </form>
 
+      <!--
       <form id="editForm" class="form-group hidden">
         <div class="form-group">
           <label for="editName">Mountain Name</label>
@@ -59,15 +68,16 @@
         </div>
         <button type="submit" class="btn btn-primary">Edit Mountain</button>
         <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
-      </form>
+      </form
+    -->
 
       <hr />
-
       <div id="mtnsDiv"></div>
-
       <hr />
-      <footer class="float-right">&copy;
-        <a href="https://www.linkedin.com/in/robertmfrenette" title="LinkedIn Profile" target="new">R.M. Frenette</a> 2018</footer>
+
+      <footer class="float-right">
+        &copy; <a href="https://www.linkedin.com/in/robertmfrenette" title="LinkedIn Profile" target="new">R.M. Frenette</a> 2018
+      </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"

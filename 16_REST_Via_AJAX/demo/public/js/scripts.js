@@ -2,6 +2,7 @@
 
 // Note: Better error handling should be implemented!
 
+// Fucntion to dynamically build page Elements
 function displayMountain(mountain) {
   var mtnsDiv = document.getElementById('mtnsDiv');
   
@@ -85,18 +86,17 @@ function createMountain() {
 
 // AJAX GET request - Single Mountain
 function getMountain(id) {
-  $('#mountainForm').hide();
+  $('#addMtnBtns').hide();
   $('#mtnsDiv').hide();
 
   $.getJSON(`/api/${id}`, () => {
   })
   .done((mountain) => {
-    //displayMountain(mountain);
-    $('#editName').val(mountain.name);
-    $('#editElev').val(mountain.elev);
-    $('#editDesc').val(mountain.desc);
+    $('#name').val(mountain.name);
+    $('#elev').val(mountain.elev);
+    $('#desc').val(mountain.desc);
     $('#editId').val(id);
-    $('#editForm').show();
+    $('#editMtnBtns').show();
   })
   .fail((e) => {
     console.log(e);
@@ -126,9 +126,9 @@ function updateMountain(id) {
     url: '/api/update',
     data: JSON.stringify({
       'mountain_id': $('#editId').val(),
-      'name': $('#editName').val(),
-      'elev': $('#editElev').val(),
-      'desc': $('#editDesc').val()
+      'name': $('#name').val(),
+      'elev': $('#elev').val(),
+      'desc': $('#desc').val()
     }), 
     success: (mountain) => { 
       document.location.href="/";
@@ -145,16 +145,16 @@ $(document).ready(() => {
   });
 
   $('#cancelBtn').click(() => {
-    $('#editName').val('');
-    $('#editElev').val('');
-    $('#editDesc').val('');
-    $('#editForm').hide();
+    $('#n').val('');
+    $('#elev').val('');
+    $('#desc').val('');
+    $('#editMtnBtns').hide();
 
-    $('#mountainForm').show();
+    $('#addMtnBtns').show();
     $('#mtnsDiv').show();
   });
 
-  $('#editForm').submit((e) => {
+  $('#editBtn').click((e) => {
     e.preventDefault();
     updateMountain();
   })
