@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Mountains</title>
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/mountains">Mountains</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+
+      <form id="mountainForm" class="form-group">
+        <div class="form-group">
+          <label for="name">Mountain Name</label>
+          <input type="text" class="form-control" id="name" name="name" required autofocus />
+        </div>
+        <div class="form-group">
+          <label for="elev">Elevation</label>
+          <input type="text" class="form-control" id="elev" name="elev" required />
+        </div>
+        <div class="form-group">
+          <label for="desc">Description (optional)</label>
+          <textarea class="form-control" name="desc" id="desc" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Mountain</button>
+        <button type="reset" class="btn btn-secondary"  id="resetBtn">Reset</button>
+      </form>
+
+      <form id="editForm" class="form-group hidden">
+        <div class="form-group">
+          <label for="editName">Mountain Name</label>
+          <input type="text" class="form-control" id="editName" name="editName" required autofocus />
+        </div>
+        <div class="form-group">
+          <label for="editElev">Elevation</label>
+          <input type="text" class="form-control" id="editElev" name="editElev" required />
+        </div>
+        <div class="form-group">
+          <label for="editDesc">Description (optional)</label>
+          <textarea class="form-control" name="editDesc" id="editDesc" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="editId" name="editId" disabled required />
+        </div>
+        <button type="submit" class="btn btn-primary">Edit Mountain</button>
+        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+      </form>
+
+      <hr />
+
+      <div id="mtnsDiv"></div>
+
+      <hr />
+      <footer class="float-right">&copy;
+        <a href="https://www.linkedin.com/in/robertmfrenette" title="LinkedIn Profile" target="new">R.M. Frenette</a> 2018</footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+      crossorigin="anonymous"></script>
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
