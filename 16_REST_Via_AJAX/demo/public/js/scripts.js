@@ -103,22 +103,6 @@ function getMountain(id) {
   });
 }
 
-// AJAX DELETE request - Delete Mountain
-function deleteMountain(id) {
-  $.ajax({
-    type: 'DELETE',
-    url: '/api/delete',
-    data: JSON.stringify({
-      'mountain_id': id
-    }), 
-    success: (mountain) => { 
-      document.location.href="/";
-    },
-      contentType: "application/json",
-      dataType: 'json'
-    });
-}
-
 // AJAX PUT - Update Mountain
 function updateMountain(id) {
   $.ajax({
@@ -129,6 +113,22 @@ function updateMountain(id) {
       'name': $('#name').val(),
       'elev': $('#elev').val(),
       'desc': $('#desc').val()
+    }), 
+    success: (mountain) => { 
+      document.location.href="/";
+    },
+      contentType: "application/json",
+      dataType: 'json'
+    });
+}
+
+// AJAX DELETE request - Delete Mountain
+function deleteMountain(id) {
+  $.ajax({
+    type: 'DELETE',
+    url: '/api/delete',
+    data: JSON.stringify({
+      'mountain_id': id
     }), 
     success: (mountain) => { 
       document.location.href="/";
