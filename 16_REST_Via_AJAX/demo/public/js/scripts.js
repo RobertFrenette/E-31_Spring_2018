@@ -145,7 +145,7 @@ $(document).ready(() => {
   });
 
   $('#cancelBtn').click(() => {
-    $('#n').val('');
+    $('#name').val('');
     $('#elev').val('');
     $('#desc').val('');
     $('#editMtnBtns').hide();
