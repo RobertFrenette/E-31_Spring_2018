@@ -1,5 +1,4 @@
-# Data and Property Binding
-In this Section we'll install the Angluar CLI and generate a new Project.
+# Angular Data and Property Binding
 
 ## Create App
 ```
