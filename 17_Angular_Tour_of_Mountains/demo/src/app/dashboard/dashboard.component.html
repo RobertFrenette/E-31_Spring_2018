@@ -1,0 +1,9 @@
+<h3>Top Mountains</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let mountain of mountains" class="col-1-4"
+    routerLink="/detail/{{mountain.id}}">
+    <div class="module mountain">
+      <h4>{{mountain.name}}</h4>
+    </div>
+  </a>
+</div>

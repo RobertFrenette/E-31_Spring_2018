@@ -1,0 +1,10 @@
+<h2>My Mountains</h2>
+<ul class="mountains">
+  <li *ngFor="let mountain of mountains">
+    <a routerLink="/detail/{{mountain.id}}">
+      <span class="badge">{{mountain.id}}</span> {{mountain.name}}
+    </a>
+  </li>
+</ul>
+ 
+<app-mountain-detail [mountain]="selectedMountain"></app-mountain-detail>

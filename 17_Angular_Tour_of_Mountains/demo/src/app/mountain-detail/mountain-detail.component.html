@@ -1,0 +1,13 @@
+<div *ngIf="mountain">
+
+  <h2>{{ mountain.name | uppercase }}</h2>
+  <div><span>id: </span>{{mountain.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="mountain.name" placeholder="name"/>
+    </label>
+  </div>
+
+</div>
+
+<button (click)="goBack()">go back</button>
