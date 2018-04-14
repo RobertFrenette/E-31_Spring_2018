@@ -39,5 +39,5 @@ webpack: Compiled successfully.
 ## Load App
 [http://localhost:4200/](http://localhost:4200/)
 
-![Launch](img/angualr_app.png?raw=true "Launch")
+![Launch](img/angular_app.png?raw=true "Launch")
 
