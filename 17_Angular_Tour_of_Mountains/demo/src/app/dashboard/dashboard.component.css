@@ -30,7 +30,7 @@ h4 {
   padding: 20px;
   text-align: center;
   color: #eee;
-  max-height: 120px;
+  /*max-height: 120px;*/
   min-width: 120px;
   background-color: #607D8B;
   border-radius: 2px;

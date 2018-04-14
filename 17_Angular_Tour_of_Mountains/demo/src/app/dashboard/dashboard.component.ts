@@ -18,6 +18,6 @@ export class DashboardComponent implements OnInit {
 
   getMountains(): void {
     this.mountiainService.getMountains()
-      .subscribe(mountains => this.mountains = mountains.slice(1, 5));
+      .subscribe(mountains => this.mountains = mountains.slice(0, 4));
   }
 }

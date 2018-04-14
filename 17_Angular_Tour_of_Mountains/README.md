@@ -36,3 +36,5 @@ webpack: Compiled successfully.
 ## Load App
 [http://localhost:4200/](http://localhost:4200/)
 
+
+![Dashboard](img/img_1?raw=true "Dashboard")
