@@ -3,8 +3,10 @@
   <a *ngFor="let mountain of mountains" class="col-1-4"
     routerLink="/detail/{{mountain.id}}">
     <div class="module mountain">
-      <h4>{{mountain.name}}
-      <br />Elevation: {{mountain.elevation}} feet</h4>
+      <h4>
+        {{mountain.name}}
+        <br />Elevation: {{mountain.elevation}} feet
+      </h4>
       <div><img src="{{mountain.img}}" /></div>
       <h3>{{mountain.effort}}</h3>
     </div>

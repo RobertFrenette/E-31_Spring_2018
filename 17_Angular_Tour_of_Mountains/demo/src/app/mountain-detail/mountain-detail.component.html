@@ -1,6 +1,11 @@
 <div *ngIf="mountain">
 
-  <h2>{{ mountain.name | uppercase }}</h2>
+  <h2>
+    {{ mountain.name | uppercase }}
+    <br />Elevation: {{mountain.elevation}} feet
+  </h2>
+  <h3>{{mountain.effort}}</h3>
+  <div><img src="{{mountain.img}}" /></div>
   <div><span>id: </span>{{mountain.id}}</div>
   <div>
     <label>name:
