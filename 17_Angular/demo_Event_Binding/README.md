@@ -75,7 +75,7 @@ Load the page in the Browser, enter Mountain info, then click the Clear button.
 ```
 
 In your Browser:
-+ Add enter Mountain information, then click the Add Mountain button.
++ Cnter Mountain information, then click the Add Mountain button.
 
 This will add the Mountain to the page and disable the Add Mountain button.
 
