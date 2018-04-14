@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  
+  <div class="container">
+    <div class="form-group">
+      <label for="mountainName">Mountain Name</label>
+      <input type="text" class="form-control" id="mountainName" placeholder="Enter a Mountain Name"required autofocus [(ngModel)]="mountainName" />
+    </div>
+    <div class="form-group">
+      <label for="mountainElevation">Elevation</label>
+      <input type="text" class="form-control" id="mountainElevation" placeholder="Elevation" required [(ngModel)]="mountainElevation" />
+    </div>
+    <div class="form-group">
+      <label for="mountainDescription">Description</label>
+      <input type="text" class="form-control" id="mountainDescription" placeholder="(optional)" [(ngModel)]="mountainDescription" />
+    </div>
+    <!-- Property Binding: [ ] -->
+    <button type="button" class="btn btn-primary" [disabled]="addNewMountains" (click)="onAddMountain()">Add Mountain</button>
+    <!-- Event Binding: ( ) -->
+    <button type="button" class="btn btn-secondary" (click)="onReset()">Clear</button>
+  </div>
+  <div class="container" id="mountainsDiv">
+      <hr />
+      <h3>Mountains</h3>
+      {{newMountain}}
+  </div>
+  
+  <div class="container">
+    <hr />
+    <!-- Even though currentYear is defiuned as type number in app.component.ts, it resolves to a string -->
+    <!--<footer class="pull-right">&copy; {{currentYear}}</footer>-->
+    <!-- Make call to method to get year -->
+    <footer class="pull-right">&copy; {{getCurrentYear()}}</footer>
+  </div>
+</div>
