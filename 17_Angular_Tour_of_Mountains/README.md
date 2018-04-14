@@ -37,4 +37,4 @@ webpack: Compiled successfully.
 [http://localhost:4200/](http://localhost:4200/)
 
 
-![Dashboard](img/img_1?raw=true "Dashboard")
+![Dashboard](img/img_1.png?raw=true "Dashboard")
