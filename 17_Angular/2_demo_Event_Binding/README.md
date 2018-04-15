@@ -1,7 +1,7 @@
 # Angular Event Binding
 
 ## Create App
-Start with App created in Section [demo_Data_Binding](https://github.com/RobertFrenette/E-31_Spring_2018/tree/master/17_Angular/demo_Data_Binding).
+Start with App created in Section [demo_Data_Binding](https://github.com/RobertFrenette/E-31_Spring_2018/tree/master/17_Angular/1_demo_Data_Binding).
 
 
 ## Load App
