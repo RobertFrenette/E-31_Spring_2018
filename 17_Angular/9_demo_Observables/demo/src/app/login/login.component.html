@@ -1,0 +1,24 @@
+<div class="container">
+  <hr />
+  <h3><span class="pull-right"><button type="button" class="btn btn-primary" (click)="navigateHome()">Home</button></span>
+</h3>
+</div>
+
+<div class="container">
+  <h2>Login</h2>
+  <div class="form-group">
+    <label for="userName">User Name</label>
+    <input type="text" class="form-control" id="userName" placeholder="Enter your User Name"required autofocus [(ngModel)]="userName" />
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Enter your Password" [(ngModel)]="password" />
+  </div>
+  <button type="button" class="btn btn-primary" (click)="onLogin()">Login</button>
+  <div *ngIf="loginError">
+    <br />
+    <div class="alert alert-danger">
+      <strong>Error!</strong> {{errMsg}}
+    </div>
+  </div>
+</div>
