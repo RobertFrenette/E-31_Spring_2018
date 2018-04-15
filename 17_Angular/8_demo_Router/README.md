@@ -94,7 +94,7 @@ An unsuccessful login will display an error message.
 And a successful login will display the Mountains.
 
 
-![AngularJS](img/ex_3.png?raw=true "AngularJS")
+![AngularJS](img/img_3.png?raw=true "AngularJS")
 
 
 ## Modify App
