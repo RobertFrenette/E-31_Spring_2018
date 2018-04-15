@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  
+  <div class="container">
+    <div class="form-group">
+      <label for="mountainName">Mountain Name</label>
+      <input type="text" class="form-control" id="mountainName" placeholder="Enter a Mountain Name"required autofocus [(ngModel)]="mountainName" />
+    </div>
+    <div class="form-group">
+      <label for="mountainElevation">Elevation</label>
+      <input type="text" class="form-control" id="mountainElevation" placeholder="Elevation" required [(ngModel)]="mountainElevation" />
+    </div>
+    <div class="form-group">
+      <label for="mountainDescription">Description</label>
+      <input type="text" class="form-control" id="mountainDescription" placeholder="(optional)" [(ngModel)]="mountainDescription" />
+    </div>
+    <!-- Property Binding: [ ] -->
+    <button type="button" class="btn btn-primary" (click)="onAddMountain()">Add Mountain</button>
+    <!-- Event Binding: ( ) -->
+    <button type="button" class="btn btn-secondary" (click)="onReset()">Clear</button>
+  </div>
+  <!-- Built-in structural (changes structure of DOM) *ngIf Directive: conditional expression returns true/false -->
+  <div class="container" id="mountainsDiv">
+      <hr />
+      <!-- Built-in ngStyle attribute directive: uses Property Binding [ ] to bind to a property of the directive -->
+      <h3 [ngStyle]="{color: getColor()}">Mountains</h3>
+      <div *ngIf="newMountainAdded; else noMountains">
+        <!--
+          String Interpolation: Whatever is evaluated in the TypeScript expression inside the String Interpolation braces {{ }} resolves to a String.
+          {{ TypeScript_Expression }} => result is a String
+        -->
+        <!-- Built-in *ngFor directive -->
+        <p *ngFor="let mountain of mountains">{{mountain}}</p>
+      </div>
+      <!-- Create ng-template with local reference (#) to conditinally display -->
+      <ng-template #noMountains>No Mountains Added.</ng-template>
+  </div>
+  
+  <div class="container">
+    <hr />
+    <!-- Even though currentYear is defiuned as type number in app.component.ts, it resolves to a string -->
+    <!--<footer class="pull-right">&copy; {{currentYear}}</footer>-->
+    <!-- Make call to method to get year -->
+    <footer class="pull-right">&copy; {{getCurrentYear()}}</footer>
+  </div>
+</div>
