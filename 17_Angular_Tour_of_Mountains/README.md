@@ -37,10 +37,21 @@ webpack: Compiled successfully.
 [http://localhost:4200/](http://localhost:4200/)
 
 
+## Screen-Shots
+
 ![Dashboard](img/img_1.png?raw=true "Dashboard")
 
 
-![Mountains](img/img_2.png?raw=true "Mountains")
+![Mountain](img/img_2.png?raw=true "Mountain")
 
 
-![Mountain](img/img_3.png?raw=true "Mountain")
+![Mountains](img/img_3.png?raw=true "Mountains")
+
+
+![Mountains](img/img_4.png?raw=true "Mountains")
+
+
+![Mountains](img/img_5.png?raw=true "Mountains")
+
+
+![Dashboard](img/img_6.png?raw=true "Dashboard")

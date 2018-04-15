@@ -22,4 +22,17 @@ export class MountainsComponent implements OnInit {
         .subscribe(mountains => this.mountains = mountains);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.mountainService.addMountain({ name } as Mountain)
+      .subscribe(mountain => {
+        this.mountains.push(mountain);
+      });
+  }
+
+  delete(mountain: Mountain): void {
+    this.mountains = this.mountains.filter(m => m !== mountain);
+    this.mountainService.deleteMountain(mountain).subscribe();
+  }
 }

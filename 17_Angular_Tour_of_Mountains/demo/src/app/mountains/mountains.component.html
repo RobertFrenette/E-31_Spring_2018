@@ -1,10 +1,21 @@
 <h2>My Mountains</h2>
+ 
+<div>
+  <label>Mountain name:
+    <input #mountainName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(mountainName.value); mountainName.value=''">
+    add
+  </button>
+</div>
+ 
 <ul class="mountains">
   <li *ngFor="let mountain of mountains">
     <a routerLink="/detail/{{mountain.id}}">
       <span class="badge">{{mountain.id}}</span> {{mountain.name}}
     </a>
+    <button class="delete" title="delete mountain"
+    (click)="delete(mountain)">x</button>
   </li>
 </ul>
- 
-<app-mountain-detail [mountain]="selectedMountain"></app-mountain-detail>

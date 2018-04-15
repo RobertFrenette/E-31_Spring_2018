@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>Mountain Search</h4>
+
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let mountain of mountains$ | async" >
+      <a routerLink="/detail/{{mountain.id}}">
+        {{mountain.name}}
+      </a>
+    </li>
+  </ul>
+</div>
