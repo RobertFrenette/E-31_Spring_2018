@@ -1,0 +1,11 @@
+<div class="container">
+  <hr />
+  <h3>User: {{userName}} <span class="pull-right"><button type="button" class="btn btn-primary" (click)="onLogout()">Logout</button></span></h3>
+</div>
+<div class="container">
+  <hr />
+  <h3>Mountains</h3>
+  <ul>
+    <li *ngFor="let mountain of mountains">{{mountain.name}} - {{mountain.elev}}'. {{mountain.desc}}</li>
+  </ul>
+</div>
