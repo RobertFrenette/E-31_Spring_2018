@@ -12,5 +12,5 @@ $ npm install
 $ ng serve
 ```
 
-## Load App (in Browser)
+## Load App
 [http://localhost:4200/](http://localhost:4200/)
