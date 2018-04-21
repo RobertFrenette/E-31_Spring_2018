@@ -1,0 +1,14 @@
+<app-nav title="{{title}}"></app-nav>
+
+<main role="main">
+  <app-jumbotron 
+    title="{{title}}"
+    likes="{{likes}}">
+  </app-jumbotron>
+  <app-gallery 
+    [mountains]="mountainsObj"
+    (likes)="countLikes($event)">
+  </app-gallery>
+</main>
+
+<app-footer></app-footer>
